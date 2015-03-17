@@ -1,0 +1,50 @@
+<div class="container"> 
+    <!-- Tabs -->
+    <br>
+    <h3 class="row title">
+        <div class="col-xs-12">
+            Employees
+        </div>
+    </h3>
+    <div class="panel panel-default"> 
+        <div class="panel-body">
+            <div class="tab-content">
+                <sun-tab class="tab-pane active" id="employees"></sun-tab>
+            </div>
+        </div>
+    </div>
+
+    <!--gridview check history-->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <h3 class="panel-heading">
+                    Geo Locations
+                </h3>
+                <div class="panel-body">
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="api_geo_names">
+                            <table ng-gridview="api_geo_names" data-resource="$apigeonames">
+                                <thead>
+                                    <tr>
+                                        <th data-name="continent" data-width="50">Continent</th>
+                                        <th data-name="capital" data-width="75">Capital</th>
+                                        <th data-name="languages" data-width="160">Languages</th>
+                                        
+                                        <th data-name="countryName">Country Name</th>
+                                        <th data-name="continentName">Continent Name</th>
+                                        <th data-name="$options" data-width="160">Options</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
