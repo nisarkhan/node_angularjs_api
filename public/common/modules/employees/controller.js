@@ -3,7 +3,7 @@
 
 angular.module('sunloan')
 .controller('employees',
-    function ($scope, $rootScope, $routeParams, $timeout, $employees) {
+    function ($scope, $rootScope, $routeParams, $timeout, $employees, $apigeonames) {
 
         $scope.employees = $employees.get({ id: $rootScope.$id }, function(response){
             if('id' in response) 
@@ -17,6 +17,10 @@ angular.module('sunloan')
             }
         });
         
+		$apigeonames.get({}, function (response) {
+                $scope.grids.api_geo_names.$data(response.geonames);
+		});
+		
          $scope.create = function(model, data, form) {            
             $scope.grids[model].$add(angular.extend($scope[model], data));
             form.$reset();
