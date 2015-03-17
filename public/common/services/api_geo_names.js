@@ -7,7 +7,7 @@
     angular
         .module('sunloan')
         .factory('$apigeonames', function ($resource, $response, $path) {
-    var $apigeonames = $resource('http://api.geonames.org/countryInfoJSON?username=design1online');
+    var $apigeonames = $resource('//api.geonames.org/countryInfoJSON?username=design1online');
 
             
 
